@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_generator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="144sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="0"
+        android:layout_marginTop="56dp"/>
+
+    <LinearLayout
+
+        android:id="@+id/minmax_layout"
+        app:layout_constraintTop_toBottomOf="@id/text_generator"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/edit_text_min"
+            android:layout_width="128dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:hint="min"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text=" to "/>
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/edit_text_max"
+            android:layout_width="128dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:hint="max"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/interval_layout"
+        app:layout_constraintTop_toBottomOf="@id/minmax_layout"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="in "
+            android:layout_marginRight="24dp"
+            android:textSize="24sp"/>
+
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/edit_text_interval"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:hint="second"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_go"
+        app:layout_constraintTop_toBottomOf="@id/interval_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="32dp"
+        android:padding="16dp"
+        android:textSize="24sp"
+        android:layout_marginRight="32dp"
+        android:text="GO"
+        />
+
+    <Button
+        android:id="@+id/button_stop"
+        app:layout_constraintTop_toBottomOf="@id/button_go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="32dp"
+        android:padding="16dp"
+        android:textSize="24sp"
+        android:layout_marginRight="32dp"
+        android:text="STOP"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
